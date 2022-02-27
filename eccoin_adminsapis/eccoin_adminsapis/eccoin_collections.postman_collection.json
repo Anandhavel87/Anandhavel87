@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "4d2885e5-1ae7-4cb7-b5df-af5f5e91eed2",
+		"name": "eccoin_collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getallusers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getuserbyid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createuser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\"username\": \"Mohammed_9889978898\",\r\n\"firstname\": \"Mohammed\",\r\n\"lastname\": \"shaik\",\r\n\"gender\": \"Male\",\r\n\"dateofbirth\": \"12/03/1990\",\r\n\"mobilenumber\": \"9889978898\",\r\n\"email\": \"mohammed@gmail.com\",\r\n\"password\":\"123456\",\r\n\"roleid\": \"2\",\r\n\"sourceoflanding\": \"user\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateuser",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\"userid\": 7, \r\n\"username\": \"Mohammed_9889978898\",\r\n\"firstname\": \"Mohammed\",\r\n\"lastname\": \"shaiks\",\r\n\"gender\": \"Male\",\r\n\"dateofbirth\": \"12/03/1990\",\r\n\"mobilenumber\": \"9889978898\",\r\n\"email\": \"mohammed@gmail.com\",\r\n\"password\":\"123456\",\r\n\"roleid\": \"2\",\r\n\"sourceoflanding\": \"user\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "getallcoincategorys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/coincategorys",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"coincategorys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getcategorybyid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/coincategorys/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"coincategorys",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createcategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"categoryname\": \"Binance Coin\",\r\n \"categoryabb\": \"BNB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/coincategorys/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"coincategorys",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatecategory",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"categoryid\": 4,\r\n \"categoryname\": \"Binance Coins\",\r\n \"categoryabb\": \"BNB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/coincategorys",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"coincategorys"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coin",
+			"item": [
+				{
+					"name": "getallcoins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/coins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"coins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getcoinsBycategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/coins/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"coins",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createcoin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coincategoryid\": 4,\r\n    \"coinrate\": \"1,000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/coins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"coins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatecoin",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coincategoryid\": 4,\r\n    \"coinrate\": \"2,000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/coins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"coins"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
